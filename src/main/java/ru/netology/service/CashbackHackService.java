@@ -7,7 +7,7 @@ public class CashbackHackService {
         if ((amount % boundary) != 0) {
             return boundary - amount % boundary;
         } else {
-            return 0
-        } ;
+            return 0;
+        }
     }
 }
