@@ -57,4 +57,10 @@ public class CashbackHackServiceTest {
         CashbackHackService service = new CashbackHackService();
         assertEquals(0, service.remain(0));
     }
+
+    @Test
+    public void shouldCalculateUnderThousand() {  //here we have Error
+        CashbackHackService service = new CashbackHackService();
+        assertEquals(100, service.remain(900));
+    }
 }
