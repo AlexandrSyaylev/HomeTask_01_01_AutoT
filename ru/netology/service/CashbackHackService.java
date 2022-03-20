@@ -6,6 +6,8 @@ public class CashbackHackService {
     public int remain(int amount) {
         if ((amount % boundary) != 0) {
             return boundary - amount % boundary;
-        } else return 0;
+        } else {
+            return 0
+        } ;
     }
 }
