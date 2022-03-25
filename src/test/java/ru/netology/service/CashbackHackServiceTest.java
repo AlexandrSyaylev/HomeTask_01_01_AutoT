@@ -37,6 +37,12 @@ public class CashbackHackServiceTest {
     }
 
     @Test
+    public void shouldCalculateUnderThousand() {
+        CashbackHackService service = new CashbackHackService();
+        assertEquals(service.remain(900), 100);
+    }
+
+    @Test //This block will fall
     public void shouldCalculateBorder() {  //here we have Error
         CashbackHackService service = new CashbackHackService();
         assertEquals(service.remain(1000), 0);
@@ -58,12 +64,6 @@ public class CashbackHackServiceTest {
     public void shouldCalculateZero() {  //here we have Error
         CashbackHackService service = new CashbackHackService();
         assertEquals(service.remain(0), 0);
-    }
-
-    @Test
-    public void shouldCalculateUnderThousand() {  //here we have Error
-        CashbackHackService service = new CashbackHackService();
-        assertEquals(service.remain(900), 100);
     }
 
 }
